@@ -33,16 +33,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: lib-ssdr-jenkins
+    repository: jx3-kubernetes-vault
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: jenkinsx.sandbox.lib.umd.edu
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: lib-ssdr-jenkins
   repository: bucketrepo
   secretStorage: vault
   vault: {}
