@@ -9,6 +9,7 @@ data:
       enabled:
         lib-ssdr-jenkins/jenkins-x-test: true
         lib-ssdr-jenkins/jx3-kubernetes-vault: true
+        lib-ssdr-jenkins/quickstart-rails-test: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -22,6 +23,7 @@ data:
       merge_method:
         lib-ssdr-jenkins/jenkins-x-test: merge
         lib-ssdr-jenkins/jx3-kubernetes-vault: merge
+        lib-ssdr-jenkins/quickstart-rails-test: merge
       queries:
       - labels:
         - approved
@@ -34,6 +36,7 @@ data:
         repos:
         - lib-ssdr-jenkins/jx3-kubernetes-vault
         - lib-ssdr-jenkins/jenkins-x-test
+        - lib-ssdr-jenkins/quickstart-rails-test
       - labels:
         - updatebot
         missingLabels:
@@ -45,6 +48,7 @@ data:
         repos:
         - lib-ssdr-jenkins/jx3-kubernetes-vault
         - lib-ssdr-jenkins/jenkins-x-test
+        - lib-ssdr-jenkins/quickstart-rails-test
       target_url: http://lighthouse-jx.jenkinsx.sandbox.lib.umd.edu/merge/status
 kind: ConfigMap
 metadata:
