@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        lib-ssdr-jenkins/jenkins-x-test: true
         lib-ssdr-jenkins/jx3-kubernetes-vault: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        lib-ssdr-jenkins/jenkins-x-test: merge
         lib-ssdr-jenkins/jx3-kubernetes-vault: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - lib-ssdr-jenkins/jx3-kubernetes-vault
+        - lib-ssdr-jenkins/jenkins-x-test
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - lib-ssdr-jenkins/jx3-kubernetes-vault
+        - lib-ssdr-jenkins/jenkins-x-test
       target_url: http://lighthouse-jx.jenkinsx.sandbox.lib.umd.edu/merge/status
 kind: ConfigMap
 metadata:

@@ -6,6 +6,10 @@ data:
       repos:
       - lib-ssdr-jenkins/jx3-kubernetes-vault
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - lib-ssdr-jenkins/jenkins-x-test
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +20,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      lib-ssdr-jenkins/jenkins-x-test:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       lib-ssdr-jenkins/jx3-kubernetes-vault:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -26,6 +35,20 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      lib-ssdr-jenkins/jenkins-x-test:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
       lib-ssdr-jenkins/jx3-kubernetes-vault:
       - config-updater
       - approve
@@ -53,6 +76,11 @@ data:
     - repos:
       - lib-ssdr-jenkins/jx3-kubernetes-vault
       trusted_org: lib-ssdr-jenkins
+    - repos:
+      - lib-ssdr-jenkins/jenkins-x-test
+      trusted_org: lib-ssdr-jenkins
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
