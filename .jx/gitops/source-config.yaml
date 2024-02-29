@@ -12,6 +12,7 @@ spec:
     - name: jenkinx-rails-quickstart
     - name: jx-rails-quickstart
     - name: jx-rails-quickstart-2
+    - name: jx-rails-quickstart-3
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
