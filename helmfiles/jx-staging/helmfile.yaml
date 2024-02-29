@@ -1,0 +1,11 @@
+filepath: ""
+namespace: jx-staging
+repositories:
+- name: dev
+  url: https://bucketrepo-jx.jenkinsx.sandbox.lib.umd.edu
+releases:
+- chart: dev/jx-rails-quickstart-3
+  version: 0.0.2
+  name: jx-rails-quickstart-3
+templates: {}
+renderedvalues: {}
