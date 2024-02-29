@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: lib-ssdr-jenkins
+    provider: github
+    repository: jenkinx-rails-quickstart
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: lib-ssdr-jenkins-jenkinx-rails-quickstart
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/lib-ssdr-jenkins/jenkinx-rails-quickstart.git
+  org: lib-ssdr-jenkins
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jenkinx-rails-quickstart
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/lib-ssdr-jenkins/jenkinx-rails-quickstart

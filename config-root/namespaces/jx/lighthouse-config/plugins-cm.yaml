@@ -12,7 +12,19 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
-      - lib-ssdr-jenkins/quickstart-rails-test
+      - lib-ssdr-jenkins/jenkinx-rails-quickstart
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - lib-ssdr-jenkins/jx-rails-quickstart-2
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - lib-ssdr-jenkins/jx-rails-quickstart-3
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - lib-ssdr-jenkins/jx-rails-quickstart
       require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
@@ -29,12 +41,27 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
-      lib-ssdr-jenkins/jx3-kubernetes-vault:
+      lib-ssdr-jenkins/jenkinx-rails-quickstart:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
-      lib-ssdr-jenkins/quickstart-rails-test:
+      lib-ssdr-jenkins/jx-rails-quickstart:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      lib-ssdr-jenkins/jx-rails-quickstart-2:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      lib-ssdr-jenkins/jx-rails-quickstart-3:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      lib-ssdr-jenkins/jx3-kubernetes-vault:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
@@ -58,8 +85,7 @@ data:
       - cat
       - dog
       - pony
-      lib-ssdr-jenkins/jx3-kubernetes-vault:
-      - config-updater
+      lib-ssdr-jenkins/jenkinx-rails-quickstart:
       - approve
       - assign
       - help
@@ -73,7 +99,50 @@ data:
       - cat
       - dog
       - pony
-      lib-ssdr-jenkins/quickstart-rails-test:
+      lib-ssdr-jenkins/jx-rails-quickstart:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      lib-ssdr-jenkins/jx-rails-quickstart-2:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      lib-ssdr-jenkins/jx-rails-quickstart-3:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      lib-ssdr-jenkins/jx3-kubernetes-vault:
+      - config-updater
       - approve
       - assign
       - help
@@ -103,7 +172,16 @@ data:
       - lib-ssdr-jenkins/jenkins-x-test
       trusted_org: lib-ssdr-jenkins
     - repos:
-      - lib-ssdr-jenkins/quickstart-rails-test
+      - lib-ssdr-jenkins/jenkinx-rails-quickstart
+      trusted_org: lib-ssdr-jenkins
+    - repos:
+      - lib-ssdr-jenkins/jx-rails-quickstart-2
+      trusted_org: lib-ssdr-jenkins
+    - repos:
+      - lib-ssdr-jenkins/jx-rails-quickstart-3
+      trusted_org: lib-ssdr-jenkins
+    - repos:
+      - lib-ssdr-jenkins/jx-rails-quickstart
       trusted_org: lib-ssdr-jenkins
     welcome:
     - message_template: Welcome

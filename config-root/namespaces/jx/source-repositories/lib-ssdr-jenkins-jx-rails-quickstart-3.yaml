@@ -5,18 +5,18 @@ metadata:
   labels:
     owner: lib-ssdr-jenkins
     provider: github
-    repository: quickstart-rails-test
+    repository: jx-rails-quickstart-3
     gitops.jenkins-x.io/pipeline: 'namespaces'
-  name: lib-ssdr-jenkins-quickstart-rails-test
+  name: lib-ssdr-jenkins-jx-rails-quickstart-3
   namespace: jx
 spec:
-  httpCloneURL: https://github.com/lib-ssdr-jenkins/quickstart-rails-test.git
+  httpCloneURL: https://github.com/lib-ssdr-jenkins/jx-rails-quickstart-3.git
   org: lib-ssdr-jenkins
   provider: https://github.com
   providerKind: github
   providerName: github
-  repo: quickstart-rails-test
+  repo: jx-rails-quickstart-3
   scheduler:
     kind: ""
     name: in-repo
-  url: https://github.com/lib-ssdr-jenkins/quickstart-rails-test
+  url: https://github.com/lib-ssdr-jenkins/jx-rails-quickstart-3
