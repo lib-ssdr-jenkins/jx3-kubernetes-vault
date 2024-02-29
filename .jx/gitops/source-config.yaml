@@ -9,7 +9,6 @@ spec:
     providerKind: github
     repositories:
     - name: jenkins-x-test
-    - name: jenkinx-rails-quickstart
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
