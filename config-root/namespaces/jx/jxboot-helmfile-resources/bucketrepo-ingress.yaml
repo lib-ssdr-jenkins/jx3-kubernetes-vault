@@ -3,13 +3,19 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
-    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/whitelist-source-range: 0.0.0.0/0
     meta.helm.sh/release-name: 'jxboot-helmfile-resources'
   name: bucketrepo
   namespace: jx
   labels:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - bucketrepo-jx.jenkinsx.sandbox.lib.umd.edu
+    secretName: bucketrepo-jx.jenkinsx.sandbox.lib.umd.edu-tls-secret
   rules:
   - http:
       paths:
