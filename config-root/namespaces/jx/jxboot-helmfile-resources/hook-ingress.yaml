@@ -12,6 +12,10 @@ metadata:
     gitops.jenkins-x.io/pipeline: 'namespaces'
 spec:
   ingressClassName: nginx
+  tls:
+  - hosts:
+    - hook-jx.jenkinsx.sandbox.lib.umd.edu
+    secretName: hook-jx.jenkinsx.sandbox.lib.umd.edu-tls-secret
   rules:
   - http:
       paths:
